@@ -6,14 +6,14 @@ from sklearn.preprocessing import MinMaxScaler
 from PIL import Image
 
 #Load model and scaler
-model = load_model('D:/Latihan Coding/Data Science Portfolio/Portfolio 1 - Gaming Laptop Price Estimation/laptopestimate.h5')
+model = load_model('laptopestimate.h5')
 scaler = MinMaxScaler()
 scaler = joblib.load('scaler.gz')
 
 st.title('Estimate The Gaming Laptop Price You Want to Know!')
 col1, col2, col3 = st.columns([1,4,1])
 with col2:
-        image = Image.open('D:/Latihan Coding/Data Science Portfolio/Portfolio 1 - Gaming Laptop Price Estimation/laptopimage.JPG')
+        image = Image.open('laptopimage.JPG')
         st.image(image, caption = 'Source : All-free-download.com')
 st.subheader('Informations : ')
 informations = (
@@ -34,7 +34,7 @@ for i in informations:
         st.markdown(i)
 
 # Created empty dataset as template
-dataset = pd.read_csv("D:/Latihan Coding/Data Science Portfolio/Portfolio 1 - Gaming Laptop Price Estimation/Trainerdata.csv")
+dataset = pd.read_csv("Trainerdata.csv")
 empty_df = dataset[0:0]
 
 col1, col2 = st.columns(2)
