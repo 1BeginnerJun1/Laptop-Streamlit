@@ -46,7 +46,7 @@ ssd_list = sorted(dataset['Solid State Drive'].unique())
 laptopbrand_list = [x.split('_')[1] for x in dataset.columns if "Laptop Brand" in x]
 os_list = [x.split('_')[1] for x in dataset.columns if "OS" in x]
 processor_list = [x.split('_')[1] for x in dataset.columns if "Processor" in x]
-ram_list = [x.split('_')[1] for x in dataset.columns if "RAM" in x]
+ram_list = sorted([x.split('_')[1] for x in dataset.columns if "RAM" in x], key=lambda x: int(x.split()[0]))
 
 # Function to convert Touch feature
 def touchconvert(a):
