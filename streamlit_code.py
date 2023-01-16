@@ -13,7 +13,7 @@ scaler = joblib.load('scaler.gz')
 st.title('Estimate The Gaming Laptop Price You Want to Know!')
 col1, col2, col3 = st.columns([1,4,1])
 with col2:
-        image = Image.open('laptopimage.JPG')
+        image = Image.open('laptopimage.jpg')
         st.image(image, caption = 'Source : All-free-download.com')
 st.subheader('Informations : ')
 informations = (
