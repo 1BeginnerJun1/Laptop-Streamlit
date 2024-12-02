@@ -1,4 +1,5 @@
 streamlit==1.12.2
+numpy==2.0.2
 pandas==1.4.2
 joblib==1.1.0
 keras==2.10.0
