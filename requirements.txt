@@ -1,8 +1,8 @@
 streamlit==1.46.0
-pandas==2.2.3
-numpy==1.24.3
+pandas>=2.2.4
+numpy>=1.26.0
 joblib==1.4.2
 scikit-learn==1.5.1
 pip==24.2
-tensorflow==2.13.0
+tensorflow==2.16.1
 pillow==11.0.0
